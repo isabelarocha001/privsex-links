@@ -3,7 +3,9 @@ import { computed, onMounted, reactive, ref } from 'vue'
 import AvatarControls from './components/AvatarControls.vue'
 import { LOGO_PRIVSEX, LOGO_TG_BLUE } from './logos'
 
-const API_BASE = String(import.meta.env.VITE_API_BASE_URL || 'https://sgolmmhbufosmtigaakx.supabase.co/functions/v1/privsex-links-api').replace(/\/$/, '')
+const DEFAULT_API_BASE = 'https://sgolmmhbufosmtigaakx.supabase.co/functions/v1/privsex-links-api'
+const configuredApiBase = String(import.meta.env.VITE_API_BASE_URL || '').trim()
+const API_BASE = (configuredApiBase && !/localhost|127\.0\.0\.1/i.test(configuredApiBase) ? configuredApiBase : DEFAULT_API_BASE).replace(/\/$/, '')
 const apiUrl = (path: string) => `${API_BASE}${path}`
 const PRIVSEX_URL = 'https://privsex.com/juliasalles'
 const PUBLIC_CHANNEL_URL = 'https://t.me/+VFz27CGP9IczMmUx'
