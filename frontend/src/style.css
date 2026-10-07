@@ -20,9 +20,9 @@ h1 { max-width: 520px; margin: 0 auto; color: #fff; font-size: clamp(1.2rem, 3.8
 .card:hover, .card:focus-visible { transform: translateY(-3px); border-color: rgba(255,255,255,.68); outline: none; }
 .card--privsex { border-color: rgba(168,85,247,.46); background: radial-gradient(circle at 78% 22%, rgba(168,85,247,.24), transparent 44%), linear-gradient(165deg,#170b25,#030106 72%); }
 .card--telegram { border-color: rgba(34,158,217,.72); background: linear-gradient(145deg, #229ed9f5, #0a5c93fa 72%); }
-.card--telegram { isolation: isolate; }
-.card--telegram > *:not(.portal-spiral) { position: relative; z-index: 1; }
-.card--telegram .arrow { z-index: 2; }
+.card--privsex { isolation: isolate; }
+.card--privsex > *:not(.portal-spiral) { position: relative; z-index: 1; }
+.card--privsex .arrow { z-index: 2; }
 .portal-spiral { position: absolute; inset: 0; z-index: 0; display: grid; place-items: center; overflow: hidden; pointer-events: none; opacity: .72; }
 .ps-ring { position: absolute; left: 72%; top: 50%; width: 30px; height: 30px; border: 1px solid transparent; border-top-color: rgba(214, 180, 254, .95); border-right-color: rgba(125, 211, 252, .62); border-bottom-color: rgba(34, 211, 238, .35); border-left-color: rgba(168, 85, 247, .72); border-radius: 50%; box-shadow: 0 0 9px rgba(168, 85, 247, .42), inset 0 0 7px rgba(125, 211, 252, .18); transform: translate(-50%, -50%); animation: portal-suck 3.2s linear infinite; }
 .ps-r1 { width: 28px; height: 28px; animation-duration: 2.1s; border-width: 2px; opacity: .95; }
