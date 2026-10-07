@@ -21,6 +21,7 @@ h1 { max-width: 520px; margin: 0 auto; color: #fff; font-size: clamp(1.2rem, 3.8
 .card--privsex { border-color: rgba(168,85,247,.46); background: radial-gradient(circle at 78% 22%, rgba(168,85,247,.24), transparent 44%), linear-gradient(165deg,#170b25,#030106 72%); }
 .card--telegram { border-color: rgba(34,158,217,.72); background: linear-gradient(145deg, #229ed9f5, #0a5c93fa 72%); }
 .icon { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; background: rgba(255,255,255,.09); color: #d8b4fe; font-size: 1.8rem; font-weight: 700; }
+.icon img { display: block; width: 30px; height: 30px; object-fit: contain; }
 .icon--tg { color: #fff; background: rgba(3,49,79,.42); }
 .copy { display: flex; flex: 1; min-width: 0; max-width: 100%; flex-direction: column; gap: 6px; }
 .copy strong { color: #fff; font-size: 1.05rem; line-height: 1.2; }

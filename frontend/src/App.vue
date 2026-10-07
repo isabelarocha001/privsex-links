@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from 'vue'
 import AvatarControls from './components/AvatarControls.vue'
+import { LOGO_PRIVSEX, LOGO_TG_BLUE } from './logos'
 
 const API_BASE = String(import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '')
 const apiUrl = (path: string) => `${API_BASE}${path}`
@@ -152,10 +153,10 @@ onMounted(async () => {
 
       <nav class="links" aria-label="Links oficiais do PrivSex">
         <a class="card card--privsex" :href="PRIVSEX_URL" target="_blank" rel="noopener noreferrer">
-          <span class="icon">P</span><span class="copy"><strong>Entrar no PrivSex</strong><small>Encontre criadores, chat e conteúdo exclusivo</small></span><span class="arrow">↗</span>
+          <span class="icon"><img :src="LOGO_PRIVSEX" alt="" width="30" height="30" /></span><span class="copy"><strong>Entrar no PrivSex</strong><small>Encontre criadores, chat e conteúdo exclusivo</small></span><span class="arrow">↗</span>
         </a>
         <a class="card card--telegram" :href="PUBLIC_CHANNEL_URL" target="_blank" rel="noopener noreferrer">
-          <span class="icon icon--tg">✈</span><span class="copy"><strong>Canal Público</strong><small>Quer conhecer as criadoras? Acesse nosso canal público no Telegram</small></span><span class="arrow">↗</span>
+          <span class="icon icon--tg"><img :src="LOGO_TG_BLUE" alt="" width="30" height="30" /></span><span class="copy"><strong>Canal Público</strong><small>Quer conhecer as criadoras? Acesse nosso canal público no Telegram</small></span><span class="arrow">↗</span>
         </a>
       </nav>
 
