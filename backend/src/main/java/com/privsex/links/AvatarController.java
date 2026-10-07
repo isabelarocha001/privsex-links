@@ -19,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class AvatarController {
-  private static final String POSITION_KEY = "PRIVSEX_LINKS_AVATAR_POSITION";
+  // Mantém compatibilidade com a posição já salva pela rota antiga.
+  private static final String POSITION_KEY = "PRIVSEX_AVATAR_POSITION";
   private final SupabaseSecretsService secrets;
   private final AdminSessionService sessions;
   private final ObjectMapper json;
