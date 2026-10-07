@@ -20,6 +20,18 @@ h1 { max-width: 520px; margin: 0 auto; color: #fff; font-size: clamp(1.2rem, 3.8
 .card:hover, .card:focus-visible { transform: translateY(-3px); border-color: rgba(255,255,255,.68); outline: none; }
 .card--privsex { border-color: rgba(168,85,247,.46); background: radial-gradient(circle at 78% 22%, rgba(168,85,247,.24), transparent 44%), linear-gradient(165deg,#170b25,#030106 72%); }
 .card--telegram { border-color: rgba(34,158,217,.72); background: linear-gradient(145deg, #229ed9f5, #0a5c93fa 72%); }
+.card--telegram { isolation: isolate; }
+.card--telegram > *:not(.portal-spiral) { position: relative; z-index: 1; }
+.card--telegram .arrow { z-index: 2; }
+.portal-spiral { position: absolute; inset: 0; z-index: 0; display: grid; place-items: center; overflow: hidden; pointer-events: none; opacity: .72; }
+.ps-ring { position: absolute; left: 72%; top: 50%; width: 30px; height: 30px; border: 1px solid transparent; border-top-color: rgba(214, 180, 254, .95); border-right-color: rgba(125, 211, 252, .62); border-bottom-color: rgba(34, 211, 238, .35); border-left-color: rgba(168, 85, 247, .72); border-radius: 50%; box-shadow: 0 0 9px rgba(168, 85, 247, .42), inset 0 0 7px rgba(125, 211, 252, .18); transform: translate(-50%, -50%); animation: portal-suck 3.2s linear infinite; }
+.ps-r1 { width: 28px; height: 28px; animation-duration: 2.1s; border-width: 2px; opacity: .95; }
+.ps-r2 { width: 52px; height: 52px; animation-duration: 2.8s; animation-direction: reverse; opacity: .72; }
+.ps-r3 { width: 78px; height: 78px; animation-duration: 3.6s; opacity: .5; }
+.ps-r4 { width: 108px; height: 108px; animation-duration: 4.4s; animation-direction: reverse; opacity: .3; }
+.ps-core { position: absolute; left: 72%; top: 50%; width: 13px; height: 13px; border-radius: 50%; background: radial-gradient(circle, #1a0a2e 0%, #000 60%, #000 100%); box-shadow: 0 0 12px 4px rgba(168, 85, 247, .6), 0 0 28px 8px rgba(34, 211, 238, .25), inset 0 0 7px #000; transform: translate(-50%, -50%); animation: portal-core-pulse 1.8s ease-in-out infinite; }
+@keyframes portal-suck { 0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); } 50% { transform: translate(-50%, -50%) rotate(180deg) scale(.92); } 100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); } }
+@keyframes portal-core-pulse { 0%, 100% { transform: translate(-50%, -50%) scale(.85); } 50% { transform: translate(-50%, -50%) scale(1.15); } }
 .icon { display: grid; flex: 0 0 auto; place-items: center; width: 44px; height: 44px; border-radius: 13px; background: rgba(255,255,255,.09); color: #d8b4fe; font-size: 1.8rem; font-weight: 700; }
 .icon img { display: block; width: 26px; height: 26px; object-fit: contain; }
 .icon--tg { color: #fff; background: rgba(3,49,79,.42); }
@@ -54,6 +66,9 @@ h1 { max-width: 520px; margin: 0 auto; color: #fff; font-size: clamp(1.2rem, 3.8
 .success, .error { margin: 0; font-size: .72rem; line-height: 1.4; }
 .success { color: #a7f3d0; }
 .error { color: #fca5a5; }
+@media (prefers-reduced-motion: reduce) {
+  .ps-ring, .ps-core { animation: none; }
+}
 @media (max-width: 390px) {
   .page { padding-left: 10px; padding-right: 10px; }
   .links { gap: 9px; }

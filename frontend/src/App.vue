@@ -158,6 +158,11 @@ onMounted(async () => {
           <span class="icon"><img :src="LOGO_PRIVSEX" alt="" width="30" height="30" /></span><span class="copy"><strong>Entrar no PrivSex</strong><small>Encontre criadores, chat e conteúdo exclusivo</small></span><span class="arrow">↗</span>
         </a>
         <a class="card card--telegram" :href="PUBLIC_CHANNEL_URL" target="_blank" rel="noopener noreferrer">
+          <span class="portal-spiral" aria-hidden="true">
+            <span class="ps-ring ps-r1"></span><span class="ps-ring ps-r2"></span>
+            <span class="ps-ring ps-r3"></span><span class="ps-ring ps-r4"></span>
+            <span class="ps-core"></span>
+          </span>
           <span class="icon icon--tg"><img :src="LOGO_TG_BLUE" alt="" width="30" height="30" /></span><span class="copy"><strong>Canal Público</strong><small>Quer conhecer as criadoras? Acesse nosso canal público no Telegram</small></span><span class="arrow">↗</span>
         </a>
       </nav>
